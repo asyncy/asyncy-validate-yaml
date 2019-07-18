@@ -9,6 +9,10 @@ set :port, 8080
 set :bind, '0.0.0.0'
 set :show_exceptions, false
 
+get '/health' do
+  response.body = 'OK'
+end
+
 post '/format' do
   data = JSON.parse request.body.read
   YAML.dump(data['data'])
