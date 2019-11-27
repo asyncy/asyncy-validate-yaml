@@ -1,14 +1,20 @@
-omg: 1
+oms: 1
 info:
   version: 1.0.0
   title: YAML
   description: YAML parser and formatting service
   license:
     name: Apache 2.0
-    url: https://opensource.org/licenses/Apache-2.0
+    url: 'https://opensource.org/licenses/Apache-2.0'
+  contact:
+    name: Open Microservices
+    url: 'https://openmicroservices.org'
+    email: core@openmicroservices.org
 lifecycle:
   startup:
-    command: ["ruby", "/app/app.rb"]
+    command:
+      - ruby
+      - /app/app.rb
 health:
   http:
     path: /health
